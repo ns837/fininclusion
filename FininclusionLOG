@@ -273,11 +273,68 @@ That means that the weight of the answer to each question is different for each 
 
 Other queries to replicate the indicator “ adults with an account in the formal financial sector”
 
-Number of people with an account
- 
 
-Number of people surveyed
+FROM SQL QUERY					FROM WEBPAGE	
+	Total	Adults with account in formal sector	%			%
+Jamaica	506	359.2169991	70.99%		Brazil [BRA]	55.86
+Brazil	1042	582.0652093	55.86%		Venezuela, RB [VEN]	44.12
+Costa Rica	1000	503.5872777	50.36%		Chile [CHL]	42.18
+Venezuela, RB	1000	441.1666161	44.12%		Dominican Republic [DOM]	38.20
+Chile	1009	425.5889907	42.18%		Ecuador [ECU]	36.74
+Dominican Republic	1000	382.0467118	38.20%		Argentina [ARG]	33.13
+Ecuador	1003	368.4570735	36.74%		Colombia [COL]	30.43
+Argentina	1000	331.3021698	33.13%		Bolivia [BOL]	28.03
+Colombia	1000	304.2780101	30.43%		Mexico [MEX]	27.43
+Bolivia	1000	280.2913277	28.03%		Guatemala [GTM]	22.32
+Mexico	1000	274.2938316	27.43%		Haiti [HTI]	22.01
+Panama	1000	249.2649539	24.93%		Paraguay [PRY]	21.72
+Uruguay	1000	235.426009	23.54%		Honduras [HND]	20.51
+Guatemala	1000	223.1888314	22.32%		Peru [PER]	20.46
+Haiti	504	110.9166347	22.01%		Nicaragua [NIC]	14.22
+Paraguay	1000	217.2014625	21.72%		El Salvador [SLV]	13.76
+Honduras	1002	205.5328913	20.51%			
+Peru	1000	204.5868541	20.46%			
+Nicaragua	1003	142.6098713	14.22%			
+El Salvador	1000	137.6461516	13.76%					
+
+
 
 SELECT economy, count(female) FROM fininclusion GROUP BY economy ORDER BY count(female);
 FINALLY!!!!!!!!
  
+Now I want to know how many adults do not have an account at a financial institution
+
+Number of adults without an account at a financial institution
+
+SELECT economy, sum(account*wgt/2) from fininclusion WHERE account = 2 GROUP by economy;
+
+(I must divide by 2!!!!!)
+
+ 	Adults without account	Total	%
+Argentina	668.3975173	1000	66.8%
+Bolivia	719.1759971	1000	71.9%
+Brazil	455.8384703	1042	43.7%
+Chile	582.5301563	1009	57.7%
+Colombia	695.2085878	1000	69.5%
+Costa Rica	496.4127223	1000	49.6%
+Dominican Republic	617.9532881	1000	61.8%
+Ecuador	633.0446775	1003	63.1%
+El Salvador	856.355142	1000	85.6%
+Guatemala	776.8111685	1000	77.7%
+Haiti	393.0833653	504	78.0%
+Honduras	796.4671087	1002	79.5%
+Jamaica	135.9932875	506	26.9%
+Mexico	706.9670406	1000	70.7%
+Nicaragua	858.6123603	1003	85.6%
+Panama	748.7238871	1000	74.9%
+Paraguay	782.7985376	1000	78.3%
+Peru	791.6415212	1000	79.2%
+Uruguay	761.4612852	1000	76.1%
+Venezuela, RB	551.3344492	1000	55.1%
+
+Now I want to know, why don’t they have an account?
+
+ANOTHER PROBLEM: after having very strange results I realized there are a invalid answers that are all registered as 1.7943E8 (an infinite number). How to fix that?
+
+
+
