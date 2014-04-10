@@ -1,0 +1,283 @@
+fininclusion
+============
+
+LOG file
+INFORMAL FINANCIAL INCLUSION IN LAC: the case of Colombia
+Natalia Salazar
+
+FINDEX DATABASE USEFUL LINKS
+
+Web page link:
+http://microdata.worldbank.org/index.php/catalog/1097
+
+Microdata link
+http://microdata.worldbank.org/index.php/catalog/1097/download/28067
+
+Main indicators for Latin America
+http://datatopics.worldbank.org/financialinclusion/region/latin-  america-and-caribbean
+
+
+MAIN DOCUMENTS
+
+Documentation (database):
+
+Name of variables,
+Characteristics of variables
+
+http://microdata.worldbank.org/index.php/catalog/1097/study-description
+
+Survey’s questionnaire 
+Questions and answers
+
+http://microdata.worldbank.org/index.php/catalog/109
+
+
+Database for Latin America
+
+Findex LAC all variables.csv
+
+
+SQLite file
+
+Fininclusion.sqlite
+
+
+
+<Week 9>
+
+
+==>	Motivation: For my final project I am interested in focusing on a database from whose analysis I can get conclusions for my country (Colombia).
+
+First I explored several topics of current discussion in my country: i) violent attacks and guerilla’s strategies for the peace process, ii) how Colombians use their daily time and iii) Congress elections results. However, after a short research I found the availability of disaggregated data is really low.
+
+I decided to look at international data produced and published by multilateral agencies (OECD, World Bank, etc). I found a very interesting database about financial inclusion produced by the World Bank. In my past work as an economist in the public sector and the research field, I have worked a lot on the topic of financial development and financial inclusion in Colombia. “This database contains the first round of Global Findex indicators, measuring how adults in 148 economies save, borrow, make payments, and manage risk. The data set can be used to track the effects of financial inclusion policies globally and develop a deeper and more nuanced understanding of how people around the world manage their day-to-day finances.”(http://microdata.worldbank.org/index.php/catalog/1097/study-description). In each country, the Worldbank surveyed 1.000 adult people. The first round of the database was published at the end of 2012. What is interesting is that there is a complete access to the microdata. 
+
+I am interested in exploring the database in order to compare the level of financial inclusion in Colombia with other developing and developed countries around the world.
+
+==>	The database
+
+The database includes indicators measuring how adults in 148 economies save, borrow, make payments, and manage risk. More specifically, the database includes indicators on the use of formal accounts, the frequency of formal account use, mode of formal account use (ATM, bank, bank agent, etc.), purposes of formal account use (remittances, government payments, wage payments, etc.), self-reported reasons for not having a formal account, savings behavior, savings method (bank, informal savings club, etc)), sources of borrowing (bank, friends/family, informal lender, etc.), purposes of borrowing (home purchase, school fees, emergency/health, funerals/weddings), the use of mobile phones to make payments, and the purchase of health and agriculture insurance. The microdata also contains information about surveyed people characteristics (gender, age, education and rural-urban).
+
+Useful links to the database and related documents
+
+o	Link to the main page of the database
+http://microdata.worldbank.org/index.php/catalog/1097
+
+o	Link to the microdata (.csv)
+http://microdata.worldbank.org/index.php/catalog/1097/download/28067
+
+Name of the database file 
+
+fininclusion.csv  (folder: journalism/data reporting)
+
+
+<Week 10>
+
+I read carefully the document that describes the variables in the database. 
+
+The 53 variables included in the database possesses:
+
+1.	ID
+2.	Name
+3.	Label (answer chosen by the respondent)
+4.	Type (e.g. discrete, continuous)
+5.	Format (e.g. numeric, characteristic)
+6.	Question 
+
+About the characteristics of the respondents, the survey database reports
+
+1.	Economy (country)
+2.	If the respondent is female
+3.	Age
+4.	Education level
+5.	Within-economy income quintile
+
+I identified the following specific financial inclusion topics surveyed:
+
+1.	Has an account in financial institution (bank, credit union, MFI, post office, cooperative)
+2.	Purpose of the account (personal transactions, business purpose or both)
+3.	Has a debit/credit card
+4.	If has an account (number of deposits/withdrawals, frequence, modes, use of checks)
+5.	Use of electronic payments
+6.	Use of mobile phone for financial transactions
+7.	If has an account, uses the account for receiving work payments, govt payments, remittances, sending money, etc
+8.	If does not have an account, reasons?
+9.	Has the person put away money (saved) in the last 12 months?
+10.	Purpose of the saving
+11.	Where has he/she saved (financial institution, saving clubs)
+12.	 Has the person got a credit in the last 12 months?
+13.	 Has this loan come from a financial institution, a store, family or friends, employer
+14.	Purpose of the loan
+15.	 Has the person bought personal / business insurance products in the last 12 months?
+
+
+I also went through the document of the World Bank that presents the first look and analysis of the data. 
+
+Demirguc-Kunt, Asli; Klapper, Leora (2012), Measuring financial inclusion : the Global Findex Database, WPS6025, The World Bank
+http://econ.worldbank.org/external/default/main?pagePK=64165259&theSitePK=469372&piPK=64165421&menuPK=64166093&entityID=000158349_20120419083611
+
+As I would like to explore a topic not covered in detail in this document this reading has been useful to define the scope of my story. 
+
+Region: 		Latin America (emphasis on Colombia)
+Possible topics: 	Formal vs. informal savings
+			Gender issues of financial inclusion
+			The use of insurance products in Latin America
+
+
+I am also thinking in completing this information with other financial development indicators in other World Bank/IMF/IADB databases, depending on the topic chosen, for example:
+
+    Enterprise Surveys
+    IMF Financial Access Surveys
+    Global Findex Database
+    Doing Business
+    WB Global Survey on Consumer Protection and Financial Literacy
+    Gallup World Poll
+    WB Financial Capability and Household Surveys
+
+There is an initiative that already put all the information together (G20 Financial Inclusion Indicators). 
+
+http://databank.worldbank.org/data/views/variableselection/selectvariables.aspx?source=g20-basic-set-of-financial-inclusion-indicators
+
+
+I am thinking that I can JOIN different databases by the country name or country code.
+
+
+
+<WEEK 11>
+
+I downloaded the following three databases that I want to JOIN in my analysis. All the databases can be joined by country name
+
+-------------------------------------------------------
+GLOBAL FINDEX database (always in blue)
+
+Findex LAC all series.csv
+
+REMEMBER, this is a microdata database
+
+Daownload
+
+Format: CSV
+
+Scope: LAC countries: the database contains data for 16 LAC countries: Argentina, Bolivia, Brazil, Chile, Costa Rica, Colombia, Dominican Republic, Ecuador, El Salvador, Guatemala, Haiti, Honduras, Mexico, Nicaragua, Paraguay, Peru
+
+Series: all
+
+Number of observations: 19,070 (individuals surveyed)
+
+BIG QUESTION: I can access the country data. Should I work with it (and the other two databases, also with information at country level) or not??????
+
+--------------------------------------------------------------------
+G20 Financial inclusion database (always in red)
+
+G20 LAC all series.xlxs
+
+(REMEMBER: this is a country database).
+Download 
+
+Scope: LAC countries Selected only 16 countries reported in the Global Financial Index Database
+Series: all
+Years: 2002-2011
+Format: excel
+
+----------------------------------------------------------------------------
+WDI (World Development indicators)- WORLD BANK (always in green)
+
+WDI LAC selected series.xlsx
+
+
+This is a country database
+
+Scope: LAC countries Selected only 16 countries reported in the Global Financial 
+Index Database
+
+Series: selection of indicators listed below
+Adjusted net enrollment rate, primary, male (% of primary school age children)
+GNI per capita, Atlas method (current US$)
+GNI, Atlas method (current US$)
+GDP growth (annual %)
+GDP per capita growth (annual %)
+GDP per capita (constant 2005 US$)
+GDP per capita (current US$)
+GDP per capita, PPP (constant 2005 international $)
+GDP, PPP (constant 2005 international $)
+Automated teller machines (ATMs) (per 100,000 adults)
+Lending interest rate (%)
+Inflation, consumer prices (annual %)
+Real interest rate (%)
+Deposit interest rate (%)
+Depositors with commercial banks (per 1,000 adults)
+Female headed households (% of households with a female head)
+Population (Total)
+Population ages 0-14 (% of total)
+Population ages 15-64 (% of total)
+Population ages 65 and above (% of total)
+Population, female (% of total)
+Physicians (per 1,000 people)
+Health expenditure, total (% of GDP)
+Mobile cellular subscriptions (per 100 people)
+Road density (km of road per 100 sq. km of land area)
+Fixed broadband Internet subscribers (per 100 people)
+(%) Program participation - All Social Protection
+(%) Program participation - All Social Safety Nets
+(%) Program participation - All Social Insurance
+Unemployment, female (% of female labor force)
+Unemployment, male (% of male labor force)
+Unemployment, total (% of total labor force)
+GINI index
+Poverty headcount ratio at $2 a day (PPP) (% of population)
+Private credit bureau coverage (% of adults)
+Procedures to enforce a contract (number)
+Procedures to register property (number)
+Public credit registry coverage (% of adults)
+Time required to enforce a contract (days)
+
+
+Years: 2002-2011
+Format: excel
+
+
+<Week 12>
+
+a)	Analysis of databases: conclusions and decisions
+
+1)	FINDEX and G20 financial inclusion databases are similar in terms of what they intend to measure. I chose working with FINDEX because it is richer in microdata. 
+2)	I will work with FINDEX and WDI
+3)	I will focus on “use of informal financial saving and loan instruments in Latin America focusing in the case of on Colombia”
+
+b)	First look at FINDEX database
+a.	First queries to know more about the database and more importantly, to check that I am reading it correctly
+b.	How do I check that? the most important indicators are reported in the database web page by country (in general they refer to formal access to financial services). I will try to replicate one of the indicators as a way to check that I am working correctly with it
+           http://datatopics.worldbank.org/financialinclusion/region/latin-  america-and-caribbean
+
+c)	SQL:
+a.	Creation of a sqlite file
+i.	Name of the table: fininclusion
+ii.	Specification the structure (varchar, numeric) based on  methodology document http://microdata.worldbank.org/index.php/catalog/1097
+This document has the variable names
+iii.	Survey’s questionnaire is available at http://microdata.worldbank.org/index.php/catalog/109
+iv.	Check process: I try to replicate the indicator: “adults with an account at a formal institution (percentage)” 
+First queries: the results did not match the results reported in the webpage
+
+SELECT economy, count(female) FROM fininclusion GROUP BY economy ORDER BY count(female); (TO KNOW THE NUMBER OF PEOPLE THAT WERE SURVEYED IN EACH COUNTRY, IMPORTANT TO CALCULATE INDICATORS IS PERCENTAGES)
+
+SELECT economy, count(female) FROM fininclusion WHERE female = 1 GROUP BY economy ORDER BY count(female) ;
+
+Select economy, count(female) FROM fininclusion WHERE account = 1 GROUP BY economy ORDER BY count(female) DESC;
+
+Select economy, count(female) FROM fininclusion WHERE q1a = 1 GROUP BY economy ORDER BY count(female) DESC;
+
+v. Importance of weights
+
+According to the methodology document, data weighting is used to ensure a nationally representative sample for each economy. First, base sampling weights are constructed to account for oversamples and household size. If an oversample has been conducted, the data are weighted to correct the disproportionate sample. Weighting by household size (number of residents age 15 and above) is used to adjust for the probability of selection, as residents in large households will have a disproportionately lower probability of being selected for the sample. Second, poststratification weights are constructed. Population statistics are used to weight the data by gender, age, and, where reliable data are available, education or socioeconomic status.
+That means that the weight of the answer to each question is different for each person surveyed. This has to be taken into account when building the indicators.
+
+Other queries to replicate the indicator “ adults with an account in the formal financial sector”
+
+Number of people with an account
+ 
+
+Number of people surveyed
+
+SELECT economy, count(female) FROM fininclusion GROUP BY economy ORDER BY count(female);
+FINALLY!!!!!!!!
+ 
