@@ -34,6 +34,34 @@ http://microdata.worldbank.org/index.php/catalog/109
 
 Database for Latin America
 
+
+•	If does not have an account, reasons:
+
+SELECT economy, sum((account=2)*wgt), sum((q10a=1)*wgt), sum((q10b=1)*wgt), sum((q10c=1)*wgt), sum((q10d=1)*wgt), sum((q10e=1)*wgt), sum((q10f=1)*wgt), sum((q10g=1)*wgt)  from fininclusion WHERE account=2 GROUP BY economy;
+
+
+•	People who have an account by income quintiles
+
+SELECT economy, sum((inc_q=1)*wgt), sum((inc_q=2)*wgt), sum((inc_q=3)*wgt), sum((inc_q=4)*wgt), sum((inc_q=5)*wgt), sum((account=1)*wgt) FROM fininclusion GROUP by inc_q, economy;
+
+•	People who have an account by income quintiles and education level
+
+SELECT economy, educ, sum((inc_q=1)*wgt), sum((inc_q=2)*wgt), sum((inc_q=3)*wgt), sum((inc_q=4)*wgt), sum((inc_q=5)*wgt), sum((account=1)*wgt) FROM fininclusion GROUP by inc_q, economy, educ;
+
+•	People who have an account by income quintiles and sex of the interviewed person
+
+SELECT economy, female, sum((inc_q=1)*wgt), sum((inc_q=2)*wgt), sum((inc_q=3)*wgt), sum((inc_q=4)*wgt), sum((inc_q=5)*wgt), sum((q11=1)*wgt) FROM fininclusion GROUP by inc_q, economy, female;
+
+•	If saved in the past 12 months, NO at a financial institution or YES in informal clubs
+
+SELECT economy, count(female*wgt), sum((q11=1)*wgt), sum((q13a=2)*wgt), sum((q13b=1)*wgt) FROM fininclusion  GROUP by  economy;
+
+SELECT economy, female, sum((q11=1)*wgt), sum((q12a=1)*wgt), sum((q12b=1)*wgt) FROM fininclusion WHERE inc_q=1 GROUP by economy, female;
+
+SELECT economy, female, sum((q11=1)*wgt), sum((q12a=1)*wgt), sum((q12b=1)*wgt) FROM fininclusion WHERE inc_q=2 GROUP by economy, female;
+
+
+
 Findex LAC all variables.csv
 
 
